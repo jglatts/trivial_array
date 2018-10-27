@@ -12,7 +12,8 @@ JDG
 /*---- Prototypes ----*/
 void load_array(int[], int);
 void print_ray(int[], int);
-void user_change_array(int[]);
+void find_index(int[], int);
+void user_change_array(int[], int, int, int			);
 
 
 int main(int argc, char const *argv[])
@@ -52,7 +53,7 @@ void load_array(int the_array[], int size)
 
 	 print_ray(the_array, how_big);
 
-	 user_change_array(the_array);
+	 find_index(the_array, size);
 }
 
 
@@ -70,9 +71,9 @@ void print_ray(int test_array[], int test_size)
 
 
 /*---- Have the user pick which index to change ----*/
-void user_change_array(int ar_test[])
+void find_index(int ar_test[], int test_size)
 {
-	int get_index;
+	int get_index, new_value;
 
 	printf("\n==================================================================\n");
 	printf("\t\tEnter An Index To Examine A Value");
@@ -82,10 +83,43 @@ void user_change_array(int ar_test[])
 	if (ar_test[get_index])
 	{
 		printf("\nIndex: %d --> Value: %d\n", get_index, ar_test[get_index]);
+		printf("Enter A New Value for This Index\n");
+		printf("Or Enter 0 to leave it be...\n");
+		scanf("%d", &new_value);
+		if (new_value == 0)
+		{
+			return;
+		}
+		else
+		{
+			user_change_array(ar_test, get_index, new_value, test_size);
+		}
 	}
 	else
 	{
 		printf("\nA value at that index does not exist...\n");
+	}
+
+}
+
+
+/*---- Change the value, then ask to display all values again ----*/
+void user_change_array(int ray[], int idx, int value, int size)
+{
+	int check;
+
+	ray[idx] = value;
+	printf("\nIdx: %d, Value Changed -> %d\n", idx, ray[idx]);
+	printf("Do you want to view all elemnts?\n");
+	printf("Hit 1 for yes...\n");
+	scanf("%d", &check);
+	if (check == 1)
+	{
+		print_ray(ray, size);
+	}
+	else
+	{
+		return;
 	}
 
 }
