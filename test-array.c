@@ -37,9 +37,7 @@ int main(int argc, char const *argv[])
 /*---- Fill the array up with random numbers ----*/
 void load_array(int the_array[], int size)
 {
-	int i;
-	int how_big;
-	int random_number;
+	int i, how_big, random_number;
 
 	for (i = 0; i < size; i++)
 	 {
