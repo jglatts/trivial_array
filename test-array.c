@@ -37,7 +37,9 @@ int main(int argc, char const *argv[])
 /*---- Fill the array up with random numbers ----*/
 void load_array(int the_array[], int size)
 {
-	int i, how_big, random_number;
+	int i;
+	int how_big;
+	int random_number;
 
 	for (i = 0; i < size; i++)
 	 {
@@ -46,10 +48,9 @@ void load_array(int the_array[], int size)
 		printf("\nIndex: %d Added: %d\n", i, random_number);
 	 } 
 
-	 how_big = sizeof(the_array) / sizeof(int);
-	 printf("\n\n\nFound -> %d elemnts in the array\n\n\n", how_big);
+	 printf("\n\n\nFound -> %d elements in the array\n\n\n", size);
 
-	 print_ray(the_array, how_big);
+	 print_ray(the_array, size);
 
 	 find_index(the_array, size);
 }
