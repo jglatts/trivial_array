@@ -13,7 +13,7 @@ JDG
 void load_array(int[], int);
 void print_ray(int[], int);
 void find_index(int[], int);
-void user_change_array(int[], int, int, int			);
+void user_change_array(int[], int, int, int);
 
 
 int main(int argc, char const *argv[])
