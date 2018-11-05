@@ -30,7 +30,7 @@ void load_ray(int ray[], int size)
 	}
 }
 
-
+/* Logical error here, tweakage to be done */
 int find_matches(int ray[], int size)
 {
 	int match_count = 0;
