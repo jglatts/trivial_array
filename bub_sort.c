@@ -35,7 +35,7 @@ int find_matches(int ray[], int size)
 {
 	int match_count = 0;
 
-	for (int i = 0; i < size; ++i)
+	for (int i = 0; i < size - 1; ++i)
 	{
 		if (ray[i] == ray[i + 1])
 		{
