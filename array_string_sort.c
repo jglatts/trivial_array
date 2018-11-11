@@ -85,9 +85,11 @@ void print_ray(int ray[], int size)
 	printf("%d\n", format);
 	printf("%d\n", mid_format);
 	printf("%d\n", last_format);
-	
-	for (int i = 0; i <= format; ++i)
+
+	for (int i = 0; i <= size; ++i)
 	{
+		printf("\t[%d]->%d\t", i, ray[i]);
+		/*
 		if ( i >= mid_format)
 		{
 			printf("\t\t[%d] --> %d\t\t", i, ray[i]);
@@ -100,6 +102,7 @@ void print_ray(int ray[], int size)
 		{
 			printf("\t[%d] --> %d\t", i, ray[i]);
 		}
+		*/
 	}
 
 }
