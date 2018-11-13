@@ -133,24 +133,22 @@ int main(int argc, char const *argv[])
 	matches = find_matches(ray, size);
 
 	printf("\n Found %d matches\n", matches);
-	printf("Enter SORT to sort through values\n --> ");
+	printf("\nEnter SORT to sort through values\n");
+	printf("Enter FIND to examine a value\n --> ");
 	scanf("%s", usr_input);
+
 	compare = strcmp(usr_input, check);
+	find_compare = strcmp(usr_input, find_check);
 	if (compare == 0)
 	{
 		sort_ray(ray, size);
 		print_ray(ray, size);
 	}
-
-	printf("\n\nEnter FIND to examine a value\n --> ");
-	scanf("%s", find_input);
-	find_compare = strcmp(find_input, find_check);
-	if (find_compare == 0)
+	else if (find_compare == 0)
 	{
 		examine_value(ray, size);
+		print_ray(ray, size);
 	}
-
-	print_ray(ray, size);
 
 	return 0;
 }
