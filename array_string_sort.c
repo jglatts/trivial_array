@@ -88,7 +88,7 @@ void print_ray(int ray[], int size)
 
 	for (int i = 0; i <= size; ++i)
 	{
-		printf("\t[%d]->%d\t", i, ray[i]);
+		printf("\t[%d]->%d\t\t", i, ray[i]);
 		/*
 		if ( i >= mid_format)
 		{
@@ -142,7 +142,7 @@ int main(int argc, char const *argv[])
 		print_ray(ray, size);
 	}
 
-	printf("Enter FIND to examine a value\n --> ");
+	printf("\n\nEnter FIND to examine a value\n --> ");
 	scanf("%s", find_input);
 	find_compare = strcmp(find_input, find_check);
 	if (find_compare == 0)
