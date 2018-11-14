@@ -54,7 +54,7 @@ void sort_strings(char names_ray[][30], int size)
 		}
 		
 		//needs another for-loop to print here, ideally another helper function
-		printf("\nLength is --> %ld\n", strlen(names_ray[s]));
+		printf("\nLength of string[%d] --> %ld\n", s, strlen(names_ray[s]));
 	}
 }
 
