@@ -38,7 +38,7 @@ void check_matches(char names_ray[][30], int size)
 /* sort strings, smallest to largest */
 void sort_strings(char names_ray[][30], int size)
 {
-	char temp[size][30]; //same as generated 2-D array, will store the sorted array.
+	char temp[size][30]; //temp storage for the greater value, does it have to be 2-D?
 
 	/* Bubble sort to find smallest string */
 	for (int s = 0; s < size - 1; ++s)
