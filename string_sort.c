@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 
+
 /* load strings in 2-D array */
 void load_ray(char names_ray[][30], int size)
 {
@@ -14,7 +15,7 @@ void load_ray(char names_ray[][30], int size)
 }
 
 
- 
+
 void check_matches(char names_ray[][30], int size)
 {
 	char find_match;
@@ -38,7 +39,7 @@ void check_matches(char names_ray[][30], int size)
 void sort_strings(char names_ray[][30], int size)
 {
 	char temp[size][30]; //same as generated 2-D array, will store the sorted array.
- 
+
 	/* Bubble sort to find smallest string */
 	for (int s = 0; s < size - 1; ++s)
 	{
@@ -52,8 +53,7 @@ void sort_strings(char names_ray[][30], int size)
 				strcpy(names_ray[value + 1], temp[value]);
 			}
 		}
-		
-		//needs another for-loop to print here, ideally another helper function
+
 		printf("\nLength of string[%d] --> %ld\n", s, strlen(names_ray[s]));
 	}
 }
@@ -79,7 +79,7 @@ int main(int argc, char const *argv[])
 	{
 		sort_strings(names, size);
 	}
-	
+
 	/*
 	for (int i = 0; i < size ; ++i)
 	{
@@ -89,11 +89,14 @@ int main(int argc, char const *argv[])
 	*/
 
 	// drop this in helper function()
+	printf("\n==============================================\n");
+	printf("Sorted strings from smallest to largest");
+	printf("\n==============================================\n");
 	for (int x = 0; x < size; ++x)
 	{
-		printf("\n%s\n", names[x]);
+		printf("%s\n", names[x]);
 	}
 
 	return 0;
 }
-	
+
