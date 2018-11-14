@@ -21,17 +21,24 @@ void check_matches(char names_ray[][30], int size)
 
 	printf("\nEnter a character to search for...\n --> ");
 	scanf("%c", find_match);
-	printf("%c\n", find_match);
+
+	//loop through all values and check each one
+	// get ASCII numbers to properly check
+	for (int i = 0; i < count; ++i)
+	{
+		/* code */
+	}
 }
 
 
-/* sort strings, smallest --> largest */
-void load_ray(char names_ray[][30], int size)
+/* sort strings, smallest to largest */
+void sort_strings(char names_ray[][30], int size)
 {
 	char temp[]; //might also have to be 2-D, check
 
 	for (int i = 0; i < size ; ++i)
 	{
+		// this loop checks the INDIVIDUAL characters of each array 
 		for (int i = 0; i < ; ++i)
 		{
 			/* code */
