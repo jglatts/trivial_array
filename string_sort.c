@@ -37,26 +37,23 @@ void check_matches(char names_ray[][30], int size)
 /* sort strings, smallest to largest */
 void sort_strings(char names_ray[][30], int size)
 {
-	char temp[size][30]; //same as generated 2-D array
-	int temp_index = 0;
-
-	/*
-	for (int i = 0; i < size - 1; ++i)
+	char temp[size][30]; //same as generated 2-D array, will store the sorted array.
+ 
+	/* Bubble sort to find smallest string */
+	for (int s = 0; s < size - 1; ++s)
 	{
-		// this loop checks the INDIVIDUAL strings
-		// if value to left is greater, the value is swaped  
-		if (strlen(names_ray[i]) < strlen(names_ray[i + 1]))
+		for (int value = 0; value < size - s - 1; ++value)
 		{
-			temp[temp_index] = names_ray[i];
-			names_ray[i] = names_ray[i + 1];
-			names_ray[i + 1] = temp[temp_index];
-			++temp_index;
-
+			if (strlen(names_ray[value]) > strlen(names_ray[value + 1]))
+			{
+				// use strcpy() to copy the values
+				strcpy(temp[value], names_ray[value]);
+				strcpy(names_ray[value], names_ray[value + 1]);
+				strcpy(names_ray[value + 1], temp[value]);
+			}
 		}
-	}
-	*/ 
-	for (int s = 0; s < size; ++s)
-	{
+		
+		//needs another for-loop to print here, ideally another helper function
 		printf("\nLength is --> %ld\n", strlen(names_ray[s]));
 	}
 }
