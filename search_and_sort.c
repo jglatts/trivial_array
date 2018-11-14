@@ -14,35 +14,50 @@ void load_ray(char names_ray[][30], int size)
 }
 
 
-/* WIP check for matches in strings */
+ 
 void check_matches(char names_ray[][30], int size)
 {
 	char find_match;
 
 	printf("\nEnter a character to search for...\n --> ");
-	scanf("%c", find_match);
+	scanf("%c", &find_match);  // remove ampersand when implementing
 
 	//loop through all values and check each one
 	// get ASCII numbers to properly check
-	for (int i = 0; i < count; ++i)
+	/*
+	for (int i = 0; i < size; ++i)
 	{
 		/* code */
 	}
+	/*
 }
+
 
 
 /* sort strings, smallest to largest */
 void sort_strings(char names_ray[][30], int size)
 {
-	char temp[]; //might also have to be 2-D, check
+	char temp[size][30]; //same as generated 2-D array
+	int temp_index = 0;
 
-	for (int i = 0; i < size ; ++i)
+	/*
+	for (int i = 0; i < size - 1; ++i)
 	{
-		// this loop checks the INDIVIDUAL characters of each array 
-		for (int i = 0; i < ; ++i)
+		// this loop checks the INDIVIDUAL strings
+		// if value to left is greater, the value is swaped  
+		if (strlen(names_ray[i]) < strlen(names_ray[i + 1]))
 		{
-			/* code */
+			temp[temp_index] = names_ray[i];
+			names_ray[i] = names_ray[i + 1];
+			names_ray[i + 1] = temp[temp_index];
+			++temp_index;
+
 		}
+	}
+	*/ 
+	for (int s = 0; s < size; ++s)
+	{
+		printf("\nLength is --> %ld\n", strlen(names_ray[s]));
 	}
 }
 
