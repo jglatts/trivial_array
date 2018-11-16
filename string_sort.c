@@ -15,7 +15,6 @@ void load_ray(char names_ray[][30], int size)
 }
 
 
-
 void check_matches(char names_ray[][30], int size)
 {
 	char find_match;
@@ -32,7 +31,6 @@ void check_matches(char names_ray[][30], int size)
 	}
 	/*
 }
-
 
 
 /* sort strings, smallest to largest */
